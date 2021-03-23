@@ -1,5 +1,4 @@
-//#include "superfatorial.h"
-#include <stdio.h>
+#include "superfatorial.h"
 
 long superfatorial(int n)
 {
@@ -10,12 +9,6 @@ long superfatorial(int n)
     }
     else
     {
-        return n * superfatorial(n - 1) * superfatorial(n - 1) / superfatorial(n-2);
+        return n * superfatorial(n - 1) * superfatorial(n - 1) / superfatorial(n - 2);
     }
-}
-
-void main()
-{
-    int j = 4;
-    printf("%d", superfatorial(j));
 }

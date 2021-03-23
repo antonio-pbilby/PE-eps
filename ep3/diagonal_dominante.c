@@ -1,30 +1,44 @@
 #include "diagonal_dominante.h"
 
-int diagonal_dominante(int n, int m[][n]) {
-    int i, j, sum, count_diagonal=0;
-    for(i = 0; i < n; i++){
+int diagonal_dominante(int n, int m[][n])
+{
+    int i, j, sum, count_diagonal = 0;
+    for (i = 0; i < n; i++)
+    {
         sum = 0;
-        for(j = 0; j < n; j++){
-            if(j != i){
-                if(m[i][j] >= 0){
+        for (j = 0; j < n; j++)
+        {
+            if (j != i)
+            {
+                if (m[i][j] >= 0)
+                {
                     sum += m[i][j];
-                } else{
+                }
+                else
+                {
                     sum -= m[i][j];
                 }
             }
         }
-        if((m[i][i]) >= 0){
-            if(m[i][i] > sum){
+        if ((m[i][i]) >= 0)
+        {
+            if (m[i][i] > sum)
+            {
                 count_diagonal += 1;
-            } 
-        } else if(-m[i][i] > sum){
-            count_diagonal+=1;
+            }
+        }
+        else if (-m[i][i] > sum)
+        {
+            count_diagonal += 1;
         }
     }
 
-    if(count_diagonal == n){
+    if (count_diagonal == n)
+    {
         return 1;
-    } else{
+    }
+    else
+    {
         return 0;
     }
 }
@@ -36,5 +50,5 @@ void main(){
                         {2,0,2,-8}};
     
     int n = diagonal_dominante (4,vetor);
-    printf("%d",n);
+    
 }*/

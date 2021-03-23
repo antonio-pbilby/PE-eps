@@ -1,36 +1,50 @@
-void ordena(int *a, int *b, int *c){
+void ordena(int *a, int *b, int *c)
+{
     int temp = *a;
     int maior, menor, meio;
-    if(*a >= *b && *a >= *c){
+    if (*a >= *b && *a >= *c)
+    {
         maior = *a;
-        if (*b >= *c){
+        if (*b >= *c)
+        {
             meio = *b;
             menor = *c;
-        }else{
+        }
+        else
+        {
             meio = *c;
             menor = *b;
         }
-    } else if (*b >= a && *b >= *c){
+    }
+    else if (*b >= *a && *b >= *c)
+    {
         maior = *b;
-        if(*a >= *c){
+        if (*a >= *c)
+        {
             meio = *a;
             menor = *c;
-        } else{
+        }
+        else
+        {
             meio = *c;
             menor = *a;
         }
     }
-    else{
+    else
+    {
         maior = *c;
-        if (*a >= *b){
+        if (*a >= *b)
+        {
             meio = *a;
             menor = *b;
-        } else{
+        }
+        else
+        {
             meio = *b;
             menor = *a;
         }
     }
-    *a = maior;
+    *a = menor;
     *b = meio;
-    *c = menor;
+    *c = maior;
 }
