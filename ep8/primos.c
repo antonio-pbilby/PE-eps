@@ -1,6 +1,6 @@
 #include "primos.h"
 #include <stdlib.h>
-
+ 
 void separar_numeros_primos(ListaNumeros *lista)
 {
     (*lista).primos = malloc(sizeof(int) * (*lista).n_numeros);
